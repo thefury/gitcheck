@@ -55,8 +55,11 @@ def display_report(repositories):
 
 # Main program begins
 # ========================
+def main():
+    path = load_path()
 
-path = load_path()
+    repositories = scan_directories(path)
+    display_report(repositories)
 
-repositories = scan_directories(path)
-display_report(repositories)
+if __name__ == '__main__':
+    main()
